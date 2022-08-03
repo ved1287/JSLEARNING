@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doResult(){
+           var a=window.document.inpForm.inp1.value
+           var b=window.document.inpForm.inp2.value
+           var c=parseInt(a)
+           var d=parseInt(b)
+           
+           document.outForm.out1.value=c+d;
+           document.outForm.out2.value=c-d;
+           document.outForm.out3.value=c*d;
+           document.outForm.out4.value=c/d;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="inpForm">
+        <table>
+            <tr>
+                <td> <label>Number 1</label></td>
+                <td><input type="text" name="inp1"></td>
+            </tr>
+            <tr>
+                <td> <label>Number 2</label></td>
+                <td><input type="text" inp="inp2"></td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                <input type="button" value="show results" onclick="doResult()">
+            </td>
+            </tr> 
+    </table>
+    </form>
+
+
+    <form name="outForm">
+        <table>
+            <tr>
+                <td>Sum</td>
+                <td><input name="out1"></td>
+            </tr>
+            <tr>
+                <td>Subtract</td>
+                <td><input name="out2"></td>
+            </tr>
+            <tr>
+                <td>Multiply</td>
+                <td><input name="out3"></td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td><input name="out4"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

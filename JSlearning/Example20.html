@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Student.js"></script>
+    <script>
+        function doController(){
+            var idInp=document.stdInpForm.idInput.value   //reading the input from UI
+            var nameInp=document.stdInpForm.nameInput.value
+            var marks1Inp=document.stdInpForm.marks1Input.value
+            var marks2Inp=document.stdInpForm.marks2Input.value
+            var marks3Inp=document.stdInpForm.marks3Input.value
+           
+          var id=window.parseInt(idInp);
+          var m1=window.parseInt(marks1Inp);
+          var m2=window.parseInt(marks2Inp);
+          var m3=window.parseInt(marks3Inp);
+          var std=new Student(id,nameInp,m1,m2,m3);
+          document.getElementById("totalmarksoutput").innerText=std.computeTotal();
+          document.getElementById("averageoutput").innerText=std.computeAverage();
+          document.getElementById("gradeoutput").innerText=std.computeGrade();    
+          
+        }
+    </script>
+</head>
+<body>
+    <form name="stdInpForm">
+        <table>
+            <tr>
+                <td><label>ID</label></td>
+                <td><input name="idInput"></td>
+            </tr>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input name="nameInput"></td>
+            </tr>
+            <tr>
+                <td><label>Marks1</label></td>
+                <td><input name="marks1Input"></td>
+            </tr>
+            <tr>
+                <td><label>Marks2</label></td>
+                <td><input name="marks2Input"></td>
+            </tr>
+            <tr>
+                <td><label>Marks3</label></td>
+                <td><input name="marks3Input"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="calculate" onclick="doController()">
+                </td>
+            </tr>
+        </table>
+    </form >
+    <form>
+        <table>
+            <tr>
+                <td>Total Marks</td>
+                <td id="totalmarksoutput"></td>
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td id="averageoutput"></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td id="gradeoutput"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

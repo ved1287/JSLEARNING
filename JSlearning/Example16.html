@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doGreet(){
+            alert("hello how are you??")
+        }
+        function f1(){
+            alert("body loaded in memory..DOM is ready")
+        }
+        function myfunc(){
+            var consent=window.confirm("are u ready to submit")
+            if(consent==false){
+                window.event.preventDefault();
+               var inp= window.document.forms[0].elements[0].value
+               document.write(inp);
+            }
+        }
+    </script>
+
+</head>
+<body onload="f1()">
+    <input type="button" value="GREET" onclick="doGreet()">
+    <form action="success.html" onsubmit="myfunc()">
+        <input>
+        <input type="submit" value="submit" > 
+      </form>
+</body>
+</html>

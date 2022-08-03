@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    employeeName=window.prompt("enter Employee Name")
+    employeeGrade=window.prompt("enter employee grade")
+    employeeSal=window.prompt("enter employee basic salary")
+    sal=window.parseInt(employeeSal);
+    if(employeeGrade=="A"){
+        allowan=(sal*35/100)
+        window.alert(employeeName+" "+employeeGrade+" "+sal+" "+allowan)
+    }
+    if(employeeGrade=="B"){
+        allowan=(sal*25/100)
+        window.alert(employeeName+" "+employeeGrade+" "+sal+" "+allowan)
+    }
+    if(employeeGrade=="C"){
+        allowan=(sal*10/100)
+        window.alert(employeeName+" "+employeeGrade+" "+sal+" "+allowan)
+    }
+    </script>
+</body>
+</html>

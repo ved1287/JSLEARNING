@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function doExecute(a,b,c){
+    if(typeof a=="function")
+        a(b,c)
+        
+
+}
+function add(x,y){
+         alert(x+y)
+     }    
+     function subtract(x,y){
+         alert(x-y)
+     }   
+     function multiply(x,y){
+         alert(x*y)
+     }   
+    </script>
+</head>
+<body>
+    <script>
+    doExecute(add,20,30)
+    doExecute(subtract,20,30)
+    doExecute(multiply,20,30)
+    </script>
+</body>
+</html>
